@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--TODO:
+  - Skills and certifications page
+  - Contact Page
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,12 +13,15 @@
   </head>
 
   <body>
+    <h1>This is the main page</h1>
     <div class="headerLinkButtons">
       <button
         class="headerLinkButton"
         role="button"
         id="homeLink"
         name="homeLink"
+        onclick="toHomePage()"
+        ;
       >
         Home
       </button>
@@ -34,6 +41,8 @@
         role="button"
         id="assembleCVLink"
         name="assembleCVLink"
+        onclick="toAssembleCVPage()"
+        ;
       >
         CV Assembler
       </button>
@@ -41,10 +50,31 @@
       <button
         class="headerLinkButton"
         role="button"
-        id="previousProjectsLink"
-        name="previousProjectsLink"
+        id="projectsLink"
+        name="projectsLink"
+        onclick="toProjectsPage()"
+        ;
       >
-        Previous Projects
+        Projects
+      </button>
+
+      <button
+        class="headerLinkButton"
+        role="button"
+        id="skillsLink"
+        name="skillsLink"
+      >
+        Skills & Certifications
+      </button>
+      <button
+        class="headerLinkButton"
+        role="button"
+        id="contactLink"
+        name="contactLink"
+        onclick="toContactPage()"
+        ;
+      >
+        Contact
       </button>
     </div>
   </body>
