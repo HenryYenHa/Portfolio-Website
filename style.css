@@ -29,16 +29,13 @@
   border-color: #4a4a4a;
   outline: 0;
 }
-
 .headerLinkButton:focus {
   border-color: #485fc7;
   outline: 0;
 }
-
 .headerLinkButton:hover {
   border-color: #b5b5b5;
 }
-
 .headerLinkButton:focus:not(:active) {
   box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
 }
