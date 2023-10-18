@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Nav Bar</title>
+    <link rel="stylesheet" href="navBar.css" />
+    <script src="jquery.js"></script>
+    <script>
+      $(function () {
+        $("#includedNavBar").load("navBar.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <a
+        class="headerLinkButton"
+        role="button"
+        id="homeLink"
+        name="homeLink"
+        href="index.html"
+        ;
+      >
+        Home
+      </a>
+
+      <a
+        class="headerLinkButton"
+        role="button"
+        id="aboutLink"
+        name="aboutLink"
+        href="/about.html"
+      >
+        About
+      </a>
+
+      <a
+        class="headerLinkButton"
+        role="button"
+        id="assembleCVLink"
+        name="assembleCVLink"
+        href="/assembleCV.html"
+      >
+        CV Assembler
+      </a>
+
+      <a
+        class="headerLinkButton"
+        role="button"
+        id="projectsLink"
+        name="projectsLink"
+        href="/projects.html"
+      >
+        Projects
+      </a>
+
+      <a
+        class="headerLinkButton"
+        role="button"
+        id="skillsLink"
+        name="skillsLink"
+        href="/skills.html"
+      >
+        Skills & Certifications
+      </a>
+      <a
+        class="headerLinkButton"
+        role="button"
+        id="contactLink"
+        name="contactLink"
+        href="/contact.html"
+      >
+        Contact
+      </a>
+    </nav>
+  </body>
+</html>

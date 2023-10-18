@@ -18,3 +18,6 @@ function toProjectsPage() {
 function toContactPage() {
   window.location.href = "/contact.html";
 }
+function toSkillsPage() {
+  window.location.href = "/skills.html";
+}

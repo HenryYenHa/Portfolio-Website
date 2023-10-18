@@ -1,81 +1,33 @@
 <!DOCTYPE html>
 <!--TODO:
-  - Skills and certifications page
-  - Contact Page
+  - Consult different pages vs same page split
+  - Link to easier view option
+  - Create a fixed menu for all pages
+  - Hardhat for sockman
+
+  NOTE: index.css: html { scroll-behavior: smooth}
 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Henry's Portfolio Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.min.js"
+    ></script>
     <script src="index.js"></script>
+    <script>
+      $(function () {
+        $("#includedNavBar").load("navBar.html");
+      });
+    </script>
   </head>
 
   <body>
     <h1>This is the main page</h1>
-    <div class="headerLinkButtons">
-      <button
-        class="headerLinkButton"
-        role="button"
-        id="homeLink"
-        name="homeLink"
-        onclick="toHomePage()"
-        ;
-      >
-        Home
-      </button>
 
-      <button
-        class="headerLinkButton"
-        role="button"
-        id="aboutLink"
-        name="aboutLink"
-        onclick="toAboutPage()"
-      >
-        About
-      </button>
-
-      <button
-        class="headerLinkButton"
-        role="button"
-        id="assembleCVLink"
-        name="assembleCVLink"
-        onclick="toAssembleCVPage()"
-        ;
-      >
-        CV Assembler
-      </button>
-
-      <button
-        class="headerLinkButton"
-        role="button"
-        id="projectsLink"
-        name="projectsLink"
-        onclick="toProjectsPage()"
-        ;
-      >
-        Projects
-      </button>
-
-      <button
-        class="headerLinkButton"
-        role="button"
-        id="skillsLink"
-        name="skillsLink"
-      >
-        Skills & Certifications
-      </button>
-      <button
-        class="headerLinkButton"
-        role="button"
-        id="contactLink"
-        name="contactLink"
-        onclick="toContactPage()"
-        ;
-      >
-        Contact
-      </button>
-    </div>
+    <div id="includedNavBar"></div>
   </body>
 </html>
