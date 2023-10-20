@@ -51,8 +51,11 @@ nav {
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  width: 1cv; /* Partial */
+  width: 17ch; /* Partial */
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Links inside the navbar */
@@ -61,15 +64,15 @@ nav a {
   flex-direction: column;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16% 16px;
   text-decoration: none;
-  justify-content: space-evenly; /*TODO: GET IT TO SPACE EVENLY APART!*/
+  justify-content: space-between; /*TODO: GET IT TO SPACE EVENLY APART!*/
 }
 
 /* Change background on mouse-over */
 nav a:hover {
-  background: #ddd;
-  color: black;
+  background: brown;
+  color: white;
 }
 
 nav a:active{
