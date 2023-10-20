@@ -51,34 +51,51 @@ nav {
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  width: 17ch; /* Partial */
+  width: 20%; /* Partial */
+  max-width: 17ch;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+#homeLink{
+  background-color: red;
+}
+
+#aboutLink{
+  background-color: orange;
+}
+
 /* Links inside the navbar */
 nav a {
+  height:12%;
   display: flex;
   flex-direction: column;
   color: #f2f2f2;
   text-align: center;
-  padding: 16% 16px;
+  padding: 17px;
   text-decoration: none;
-  justify-content: space-between; /*TODO: GET IT TO SPACE EVENLY APART!*/
+  justify-content: space-between; 
 }
 
 /* Change background on mouse-over */
 nav a:hover {
-  background: brown;
+  background: navy;
   color: white;
+  transition: .5s;
 }
 
 nav a:active{
-  background-color: green;
-  color: white;
+  background-color: skyblue;
+  color: black;
   
+}
+
+.nav a.navSplit {
+  float: right;
+  background-color: yellow;
+  color: green;
 }
 
 /* Main content 

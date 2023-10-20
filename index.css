@@ -1,0 +1,29 @@
+/*TODO:
+- Center vertically
+- 
+*/
+
+html { scroll-behavior: smooth}
+
+
+#currentPage {
+  margin-left:20%;
+}
+
+@media screen and (min-width: 700px){
+  #currentPage {
+    margin-left:17ch;  
+  }
+}
+section {
+/*  padding-left: 1vh;*/
+  height: 98vh;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+

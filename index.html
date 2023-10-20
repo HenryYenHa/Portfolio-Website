@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <!--TODO:
   - Consult different pages vs same page split
-  - Link to easier view option
-  - Create a fixed menu for all pages
   - Hardhat for sockman
 
-  NOTE: index.css: html { scroll-behavior: smooth}
 -->
 <html lang="en">
   <head>
@@ -13,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Henry's Portfolio Website</title>
     <link rel="stylesheet" href="index.css" />
+
+    <!--This is the stuff that magically generates the navBar and other stuff from other files-->
     <script
       type="text/javascript"
       src="http://code.jquery.com/jquery-latest.min.js"
@@ -20,14 +19,49 @@
     <script src="index.js"></script>
     <script>
       $(function () {
-        $("#includedNavBar").load("navBar.html");
+        $("#includeNavBar").load("navBar.html");
+      });
+
+      $(function () {
+        $("#includeSkills").load("skills.html");
+      });
+
+      $(function () {
+        $("#includeProjects").load("projects.html");
+      });
+
+      $(function () {
+        $("#includeContact").load("contact.html");
+      });
+
+      $(function () {
+        $("#includeAbout").load("about.html");
       });
     </script>
   </head>
 
   <body>
-    <h1>This is the main page</h1>
-
-    <div id="includedNavBar"></div>
+    <div id="includeNavBar"></div>
+    <div id="currentPage">
+      <section id="pageTop">
+        <div id="pageTop">
+          <h1>Henry Ha</h1>
+          <h2>This is some sort of intro here</h2>
+          <h2>Maybe I need a tagline.</h2>
+        </div>
+      </section>
+      <section id="skills">
+        <div id="includeSkills"></div>
+      </section>
+      <section id="projects">
+        <div id="includeProjects"></div>
+      </section>
+      <section id="about">
+        <div id="includeAbout"></div>
+      </section>
+      <section id="contact">
+        <div id="includeContact"></div>
+      </section>
+    </div>
   </body>
 </html>
