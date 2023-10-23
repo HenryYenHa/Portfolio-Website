@@ -1,12 +1,14 @@
 /*TODO:
 - Center vertically
-- 
+- On hover of section, have a different button on nav bar highlighted
+- Question why this does not work
 */
 
 html { scroll-behavior: smooth}
 
 
 #currentPage {
+  flex-wrap: wrap;
   margin-left:20%;
 }
 
@@ -15,6 +17,16 @@ html { scroll-behavior: smooth}
     margin-left:17ch;  
   }
 }
+
+
+@media screen and (min-height: 400px){/*WHY DOES THIS NOT WORK?!*/
+  #nav{
+    background-color: yellow;
+    padding: 0 0 0 0;  
+  }
+}
+
+
 section {
 /*  padding-left: 1vh;*/
   height: 98vh;

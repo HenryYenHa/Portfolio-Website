@@ -58,13 +58,13 @@ nav {
   flex-direction: column;
   justify-content: space-between;
 }
-
+/* 
 #homeLink{
   background-color: red;
-}
+} */
 
-#aboutLink{
-  background-color: orange;
+.navSplit{
+  background-color: red;
 }
 
 /* Links inside the navbar */
@@ -74,7 +74,7 @@ nav a {
   flex-direction: column;
   color: #f2f2f2;
   text-align: center;
-  padding: 17px;
+  padding: 20% 0 0 0 ;
   text-decoration: none;
   justify-content: space-between; 
 }
@@ -97,6 +97,8 @@ nav a:active{
   background-color: yellow;
   color: green;
 }
+
+
 
 /* Main content 
 .main {
