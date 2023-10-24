@@ -1,0 +1,101 @@
+/*TODO:
+- Center vertically
+- On hover of section, have a different button on nav bar highlighted
+- Question why this does not work
+*/
+
+html { scroll-behavior: smooth}
+
+
+
+
+#currentPage {
+  flex-wrap: wrap;
+  margin-left:20%;
+  background-image: url("../images/WallpaperByFetalStar.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (min-width: 700px){
+  #currentPage {
+    margin-left:17ch;  
+  }
+}
+
+
+@media screen and (min-height: 400px){/*WHY DOES THIS NOT WORK?!*/
+  #nav{
+    background-color: yellow;
+    padding: 0 0 0 0;  
+  }
+}
+
+
+nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 20%; /* Partial */
+  max-width: 17ch;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* 
+#homeLink{
+  background-color: red;
+} */
+
+.navSplit{
+  background-color: red;
+}
+
+/* Links inside the navbar */
+nav a {
+  height:12%;
+  display: flex;
+  flex-direction: column;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6vh 0 0 0 ;
+  text-decoration: none;
+  justify-content: space-between; 
+}
+
+/* Change background on mouse-over */
+nav a:hover {
+  background: navy;
+  color: white;
+  transition: .5s;
+}
+
+nav a:active{
+  background-color: skyblue;
+  color: white;
+  
+}
+
+.nav a.navSplit {
+  float: right;
+  background-color: yellow;
+  color: green;
+}
+
+
+
+section {
+/*  padding-left: 1vh;*/
+  height: 100vh;
+  box-sizing: border-box;
+  min-height: fit-content;
+  color: white;
+}
+
+.section-container {
+  display: flex;
+}
+
+

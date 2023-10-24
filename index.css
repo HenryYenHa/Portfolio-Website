@@ -7,6 +7,8 @@
 html { scroll-behavior: smooth}
 
 
+
+
 #currentPage {
   flex-wrap: wrap;
   margin-left:20%;
@@ -29,7 +31,7 @@ html { scroll-behavior: smooth}
 
 section {
 /*  padding-left: 1vh;*/
-  height: 98vh;
+  height: 99vh;
   box-sizing: border-box;
   min-height: fit-content;
 }
