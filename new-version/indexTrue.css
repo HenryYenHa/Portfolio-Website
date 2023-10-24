@@ -1,18 +1,43 @@
 /*TODO:
-- Center vertically
 - On hover of section, have a different button on nav bar highlighted
-- Question why this does not work
+- On hover of section, have the background change
+- Fix the top portion empty space or fill it with something!
+- Question why this does not work (multiple)
 */
-
+:root {
+  /* Theme for website*/
+  --backgroundCol1: #333333;
+  --backgroundCol2: #2C494B;
+  --backgroundCol3: #265F63;
+  --backgroundCol4: #1F757B;
+  --backgroundCol5: #11A1AA;
+  --backgroundCol6: #04CDDA;
+  --fontCol1: white;
+  --highlightCol1: navy;
+  --clickCol1: skyblue;
+}
 html { scroll-behavior: smooth}
 
 
+img {
+  animation: mymove 7s infinite;
+}
 
+@keyframes mymove {
+  50% {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+  }
+}
 
+/*SETUP Viewable Page*/
 #currentPage {
+  padding: 0 0 0 0;
+  margin-top: 0;
   flex-wrap: wrap;
   margin-left:20%;
-  background-image: url("../images/WallpaperByFetalStar.png");
+  max-width: 100%;
+  background-image: linear-gradient(var(--backgroundCol1),var(--backgroundCol1), var(--backgroundCol2),var(--backgroundCol3));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -34,7 +59,7 @@ html { scroll-behavior: smooth}
 
 nav {
   overflow: hidden;
-  background-color: #333;
+  background-image: linear-gradient(var(--backgroundCol1),var(--backgroundCol1), var(--backgroundCol4),var(--backgroundCol6));
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 20%; /* Partial */
@@ -51,14 +76,21 @@ nav {
 
 .navSplit{
   background-color: red;
+  text-decoration: line-through;
+  text-decoration-color: maroon;
 }
+.navSplit:hover{
+  background-color: maroon;
+  color: black;
+}
+
 
 /* Links inside the navbar */
 nav a {
   height:12%;
   display: flex;
   flex-direction: column;
-  color: #f2f2f2;
+  color: var(--fontCol1);
   text-align: center;
   padding: 6vh 0 0 0 ;
   text-decoration: none;
@@ -67,23 +99,15 @@ nav a {
 
 /* Change background on mouse-over */
 nav a:hover {
-  background: navy;
-  color: white;
+  background: var(--highlightCol1);
+  color: var(--fontCol1);
   transition: .5s;
 }
 
 nav a:active{
-  background-color: skyblue;
-  color: white;
-  
+  background-color: var(--clickCol1);
+  color: var(--fontCol1);
 }
-
-.nav a.navSplit {
-  float: right;
-  background-color: yellow;
-  color: green;
-}
-
 
 
 section {

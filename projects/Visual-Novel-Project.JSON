@@ -1,0 +1,7 @@
+{
+  "name":"Visual Novel",
+  "imgURL":"../images/visualnovel.jpg",
+  "date":"2010/04/23",
+  "description": "A novel where the user makes choices along a story to determine the direction of the narrative. with supporting images, sound and music.",
+  "skills": ["Java","Leadership","Team Mentor"]
+}
