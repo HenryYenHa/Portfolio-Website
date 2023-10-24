@@ -1,0 +1,10 @@
+{
+  "name":"Drone Conference Data Visualization",
+  "imgURL":"../images/webconference.webp",
+  "imgAlt":"Drone with a camera",
+  "imageCredit":"https://goldencamera.pk/wp-content/uploads/2022/05/dji_cp_ma_00000488_01_mini_3_pro_with_1652172384_1700259.webp",
+  "date":"2012/06/17",
+  "description": "Analyzed data to find trends on an experimental design with drone conferencing technologies",
+  "skills": ["Analysis","Data Cleaning","pandas", "Tableau"],
+  "githubURL":null
+}

@@ -20,15 +20,16 @@ html { scroll-behavior: smooth}
 
 
 img {
-  animation: mymove 7s infinite;
+  animation: greyanimation 5s infinite;
 }
 
-@keyframes mymove {
+@keyframes greyanimation {
   50% {
     -webkit-filter: grayscale(100%); 
     filter: grayscale(100%);
   }
 }
+
 
 /*SETUP Viewable Page*/
 #currentPage {
