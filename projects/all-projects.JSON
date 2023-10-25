@@ -1,0 +1,35 @@
+{
+  "count" : 3,
+  "payload" : [
+    {
+      "name":"Drone Conference Data Visualization",
+      "imgURL":"../images/webconference.webp",
+      "imgAlt":"Drone with a camera",
+      "imageCredit":"https://goldencamera.pk/wp-content/uploads/2022/05/dji_cp_ma_00000488_01_mini_3_pro_with_1652172384_1700259.webp",
+      "date":"2012/06/17",
+      "description": "Analyzed data to find trends on an experimental design with drone conferencing technologies",
+      "skills": ["Analysis","Data Cleaning","pandas", "Tableau"],
+      "githubURL":null
+    },
+    {
+      "name":"Travel Stories",
+      "imgURL":"../images/visualnovel.jpg",
+      "imgalt":"A globe with many colorful icons surrounding it",
+      "imageCredit":"https://www.alamy.com/planet-earth-with-travel-icon-illustration-in-colorful-image359668297.html",
+      "date":"2013/03/13",
+      "description": "A novel where the user makes choices along a story to determine the direction of the narrative. with supporting images, sound and music.",
+      "skills": ["Java","Leadership","Team Mentor"],
+      "githubURL":null
+    },
+    {
+      "name":"Visual Novel",
+      "imgURL":"../images/visualnovel.jpg",
+      "imgalt":"Gummy snakes on a toy plane",
+      "imageCredit":"https://i.pinimg.com/originals/15/2b/74/152b745c8b5f85a4a68dc8225b744bb7.jpg",
+      "date":"2010/04/23",
+      "description": "A novel where the user makes choices along a story to determine the direction of the narrative. with supporting images, sound and music.",
+      "skills": ["Java","Leadership","Team Mentor"],
+      "githubURL":null
+    }
+  ]
+}

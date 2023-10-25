@@ -20,15 +20,16 @@ html { scroll-behavior: smooth}
 
 
 img {
+  background-color: rgb(255, 255, 0,.8);
   animation: greyanimation 5s infinite;
 }
 
-@keyframes greyanimation {
+/* @keyframes greyanimation {
   50% {
     -webkit-filter: grayscale(100%); 
     filter: grayscale(100%);
   }
-}
+} */
 
 
 /*SETUP Viewable Page*/

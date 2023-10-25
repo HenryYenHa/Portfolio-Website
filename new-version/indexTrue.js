@@ -3,7 +3,7 @@
   - Learn to read how many files there are and act accordingly
 */
 
-const fs = require("fs"); //Node import?
+// const fs = require("fs"); //Node import? ONLY WORKS ON SERVER SIDE NOT CLIENT DONT USE IT
 
 function checkURL(theURL) {
   if (theURL == null) {
@@ -59,25 +59,17 @@ class Project {
 //   githubURL: null,
 // };
 
-// Parse the JSON files into an array of Project objects
-function getDirtyJSONs() {
-  //List of JSON files to process
-  var projList = [];
-  //TODO: MAKE THIS PORTION GRAB ALL INSTEAD OF HARDCODED NAMES
-  projList[0] = "../projects/Travel-Stories.JSON";
-  projList[1] = "../projects/Drone-Conference-Data.JSON";
-  projList[2] = "../projects/Visual-Novel-Project.jSON";
+// Parse the JSON file into an array of Project objects
+async function getDirtyJSONs(url) {
+  const rawFetch = await fetch(url);
+  const content = await rawFetch.json();
+  content.count;
 
-  var dirtyJSONs = [];
-  //Return dirtyJSON list
-  for (file of projList) {
-    console.log(projList + "prolist");
-    console.log(
-      fs.readFile(file, function (err, data) {
-        return data;
-      })
-    );
-  }
-  console.log("dirty" + dirtyJSONs);
+  // for (file of projList) {
+  //   const response = await fetch(file);
+  //   const content = await response.json();
+  //   console.log(content);
+  // }
+  // console.log("dirty" + dirtyJSONs);
 }
-getDirtyJSONs();
+getDirtyJSONs("../projects/all-projects.JSON");
