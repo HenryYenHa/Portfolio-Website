@@ -1,7 +1,17 @@
 /* TODO LIST:
   - Generate the cards for projects
-
+  - Learn to read how many files there are and act accordingly
 */
+
+const fs = require("fs"); //Node import?
+
+function checkURL(theURL) {
+  if (theURL == null) {
+    return "www.google.com";
+  } else {
+    return theURL;
+  }
+}
 
 /*Project objects will have the following details:
 - Name of project
@@ -13,14 +23,6 @@
 - List of skills/tools used in the project
 - GithubURL of project
 */
-
-function checkURL(theURL) {
-  if (theURL == null) {
-    return "MISSING_LINK";
-  } else {
-    return theURL;
-  }
-}
 
 class Project {
   constructor(
@@ -57,4 +59,25 @@ class Project {
 //   githubURL: null,
 // };
 
-// Parse the JSON file
+// Parse the JSON files into an array of Project objects
+function getDirtyJSONs() {
+  //List of JSON files to process
+  var projList = [];
+  //TODO: MAKE THIS PORTION GRAB ALL INSTEAD OF HARDCODED NAMES
+  projList[0] = "../projects/Travel-Stories.JSON";
+  projList[1] = "../projects/Drone-Conference-Data.JSON";
+  projList[2] = "../projects/Visual-Novel-Project.jSON";
+
+  var dirtyJSONs = [];
+  //Return dirtyJSON list
+  for (file of projList) {
+    console.log(projList + "prolist");
+    console.log(
+      fs.readFile(file, function (err, data) {
+        return data;
+      })
+    );
+  }
+  console.log("dirty" + dirtyJSONs);
+}
+getDirtyJSONs();
