@@ -5,14 +5,6 @@
 
 // const fs = require("fs"); //Node import? ONLY WORKS ON SERVER SIDE NOT CLIENT DONT USE IT
 
-function checkURL(theURL) {
-  if (theURL == null) {
-    return "www.google.com";
-  } else {
-    return theURL;
-  }
-}
-
 /*Project objects will have the following details:
 - Name of project
 - URL of image for project
@@ -60,16 +52,31 @@ class Project {
 // };
 
 // Parse the JSON file into an array of Project objects
-async function getDirtyJSONs(url) {
-  const rawFetch = await fetch(url);
-  const content = await rawFetch.json();
-  content.count;
 
-  // for (file of projList) {
-  //   const response = await fetch(file);
-  //   const content = await response.json();
-  //   console.log(content);
-  // }
-  // console.log("dirty" + dirtyJSONs);
+async function getDirtyJSONs(url) {
+  const rawFetch = await fetch(url); // Grab raw data
+  const jsFetch = await rawFetch.json(); //Turn to JS readable
+  const payload = await jsFetch.payload; //Grab the payload
+
+  let projectPop = "";
+  for (const project of payload) {
+    projectPop += `
+    <div class="container">
+      <div class="wrapper">
+        <img
+          src="${project.imgURL}"
+          class="projImg"
+          alt="${project.imgalt}"
+        />
+        <h3>${project.name}</h3>
+        <p>${project.description}</p>
+      </div>
+    <div class="button-wrapper">
+      <button class="btn outline">To CV Details</button>
+      <button class="btn fill" >Github Code</button>
+    </div>
+  </div>`;
+  }
 }
+
 getDirtyJSONs("../projects/all-projects.JSON");
