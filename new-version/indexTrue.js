@@ -59,9 +59,14 @@ async function getDirtyJSONs(url) {
   const payload = await jsFetch.payload; //Grab the payload
 
   let projectPop = "";
-  for (const project of payload) {
+  for (project of payload) {
+    console.log("DD"); //TO DELETE
+    console.log(
+      `${project.name},${project.description},${project.skills},${project.date}`
+    );
+
     projectPop += `
-    <div class="container">
+    <div class="container fade">
       <div class="wrapper">
         <img
           src="${project.imgURL}"
@@ -71,18 +76,29 @@ async function getDirtyJSONs(url) {
         <h3>${project.name}</h3>
         <p>${project.description}</p>
       </div>
-    <div class="button-wrapper">
-      <button class="btn outline">To CV Details</button>
-      <button class="btn fill" >Github Code</button>
-    </div>
-  </div>`;
+      <div class="button-wrapper">
+        <button
+          class="btn outline"
+          onclick="window.location.href='${project.githubURL}';"
+        >
+          GitHub Code
+        </button>
+        <button
+          class="btn fill"
+          onclick="window.location.href='${project.demoURL}';"
+        >
+          Try Demo
+        </button>
+      </div>
+    </div>`;
+    document.getElementById("populateProjectsHere").innerHTML += projectPop;
   }
 }
 
 getDirtyJSONs("../projects/all-projects.JSON");
 
 /*Project Slideshow code*/
-/******************************/
+/************************************************************************************************************************/
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -96,7 +112,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
+  let slides = document.getElementsByClassName("container");
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {
     slideIndex = 1;
