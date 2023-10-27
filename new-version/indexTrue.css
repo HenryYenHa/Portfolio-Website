@@ -14,7 +14,8 @@
   --backgroundCol3a: #11A1AA;
   --backgroundCol3b: #04CDDA;
   --fontCol1: white;
-  --highlightCol1: navy;
+  --highlightCol1: #0bd050;
+  --highlightCol2: #357eec;
   --clickCol1: skyblue;
 }
 html { scroll-behavior: smooth}
@@ -112,14 +113,14 @@ nav a {
 
 /* Change background on mouse-over */
 nav a:hover {
-  background: var(--highlightCol1);
+  text-shadow: 2px 2px var(--highlightCol2);
   color: var(--fontCol1);
   transition: .5s;
+  text-size-adjust: 120%;
 }
 
 nav a:active{
-  background-color: var(--clickCol1);
-  color: var(--fontCol1);
+  color: var(--highlightCol2);
 }
 
 

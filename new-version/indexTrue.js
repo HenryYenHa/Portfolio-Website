@@ -133,3 +133,63 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+// Detect Scrolling
+/*************************************************************************************************/
+// Initial state
+var scrollPosi = 0;
+// adding scroll event
+window.addEventListener("scroll", function () {
+  console.log("HIHIHI ");
+  // detects new state and compares it with the old one
+  if (document.body.getBoundingClientRect().top > scrollPosi) {
+    scrollUpward;
+  } else {
+    scrollDownward;
+  }
+  // saves the new position for iteration.
+  scrollPosi = document.body.getBoundingClientRect().top;
+});
+
+var scrollPos = 0;
+//Scroll Up Stuff
+function scrollUpward() {
+  scrollPos--;
+  if (scrollPos < 0) {
+    scrollPos = 0;
+  }
+  scrollTo(scrollPos);
+}
+//Scroll Down Stuff
+function scrollDownward() {
+  scroll++;
+  if (scrollPos > 4) {
+    scrollPos = 4;
+  }
+  scrollTo(scrollPos);
+}
+//Scroll To Stuff
+function scrollTo(n) {
+  scrollPos = n;
+  console.log("sPos" + scrollPos);
+  switch (scrollPos) {
+    case 0:
+      window.location.href = "#pageTop";
+      break;
+    case 1:
+      window.location.href = "#skills";
+      break;
+    case 2:
+      window.location.href = "#projects";
+      break;
+    case 3:
+      window.location.href = "#about";
+      break;
+    case 4:
+      window.location.href = "#contact";
+      break;
+    default:
+      console.log("SCROLLING TO UNKNOWN ZONE#####################");
+    // code block
+  }
+}
