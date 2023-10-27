@@ -57,34 +57,41 @@ async function getDirtyJSONs(url) {
   const payload = await jsFetch.payload; //Grab the payload
 
   let projectPop = "";
+  let projPopNum = 0;
   for (project of payload) {
     //Populate what needs to be written to innerHTML
+    projPopNum++;
     projectPop += `
     <div class="container fade">
       <div class="wrapper">
-        <img
-          src="${project.imgURL}"
-          class="projImg"
-          alt="${project.imgalt}"
-        />
+        <div class="alignLeftAndRight">
+          <img
+            src="${project.imgURL}"
+            class="projImg"
+            alt="${project.imgalt}"
+          />
+          <div class="alignUpAndDown">
+            <button
+              class="btn outline"
+              onclick="window.location.href='${project.githubURL}';"
+            >
+              GitHub Code
+            </button>
+            <button
+              class="btn fill"
+              onclick="window.location.href='${project.demoURL}';"
+            >
+              Try Demo
+            </button>
+          </div>
+        </div>
         <h3>${project.name}</h3>
-        <p>${project.description}</p>
-      </div>
-      <div class="button-wrapper">
-        <button
-          class="btn outline"
-          onclick="window.location.href='${project.githubURL}';"
-        >
-          GitHub Code
-        </button>
-        <button
-          class="btn fill"
-          onclick="window.location.href='${project.demoURL}';"
-        >
-          Try Demo
-        </button>
+        <p class="cardDetails">${project.description}</p>
       </div>
     </div>`;
+    document.getElementById(
+      "populateDotsHere"
+    ).innerHTML += `<span class="dot" onclick="currentSlide(${projPopNum})"></span>`;
   }
   //Write to innerHTML (the DOM)
   document.getElementById("populateProjectsHere").innerHTML += projectPop;
