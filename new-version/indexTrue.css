@@ -7,12 +7,12 @@
 */
 :root {
   /* Theme for website*/
-  --backgroundCol1: #333333;
-  --backgroundCol2: #2C494B;
-  --backgroundCol3: #265F63;
-  --backgroundCol4: #1F757B;
-  --backgroundCol5: #11A1AA;
-  --backgroundCol6: #04CDDA;
+  --backgroundCol1a: #333333;
+  --backgroundCol1b: #2C494B;
+  --backgroundCol2a: #265F63;
+  --backgroundCol2b: #1F757B;
+  --backgroundCol3a: #11A1AA;
+  --backgroundCol3b: #04CDDA;
   --fontCol1: white;
   --highlightCol1: navy;
   --clickCol1: skyblue;
@@ -27,7 +27,7 @@ html { scroll-behavior: smooth}
   flex-wrap: wrap;
   margin-left:20%;
   max-width: 100%;
-  background-image: linear-gradient(var(--backgroundCol1),var(--backgroundCol1), var(--backgroundCol2),var(--backgroundCol3));
+  background-image: linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a), var(--backgroundCol2a),var(--backgroundCol3a));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -51,7 +51,7 @@ html { scroll-behavior: smooth}
 /*******************************************************************************************************/
 nav {
   overflow: hidden;
-  background-image: linear-gradient(var(--backgroundCol1),var(--backgroundCol1), var(--backgroundCol4),var(--backgroundCol6));
+  background-image: linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a), var(--backgroundCol2b),var(--backgroundCol3b));
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 20%; /* Partial */
@@ -60,6 +60,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-right: 3px groove var(--fontCol1);
 }
 .navSplit{
   background-color: red;
@@ -99,7 +100,6 @@ nav a:active{
 
 
 section.pageSection {
-/*  padding-left: 1vh;*/
   height: 100vh;
   box-sizing: border-box;
   min-height: fit-content;
@@ -228,10 +228,9 @@ img {vertical-align: middle;}
   padding: 38px;  
   filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
   display: hidden;
-  width: 25%;
   min-width: 350px;
-  width: 60%;
-  max-width: 500px;
+  width: 200%;
+  max-width: 78%;
   max-height: 80%;
 
   flex-direction: column;

@@ -1,7 +1,5 @@
 /* TODO LIST:
-  - Generate the cards for projects
-  - Learn to read how many files there are and act accordingly
-*/
+ */
 
 // const fs = require("fs"); //Node import? ONLY WORKS ON SERVER SIDE NOT CLIENT DONT USE IT
 
@@ -60,11 +58,7 @@ async function getDirtyJSONs(url) {
 
   let projectPop = "";
   for (project of payload) {
-    console.log("DD"); //TO DELETE
-    console.log(
-      `${project.name},${project.description},${project.skills},${project.date}`
-    );
-
+    //Populate what needs to be written to innerHTML
     projectPop += `
     <div class="container fade">
       <div class="wrapper">
@@ -91,8 +85,11 @@ async function getDirtyJSONs(url) {
         </button>
       </div>
     </div>`;
-    document.getElementById("populateProjectsHere").innerHTML += projectPop;
   }
+  //Write to innerHTML (the DOM)
+  document.getElementById("populateProjectsHere").innerHTML += projectPop;
+  //Refresh the slides
+  showSlides(1);
 }
 
 getDirtyJSONs("../projects/all-projects.JSON");
