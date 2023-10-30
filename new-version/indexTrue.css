@@ -19,6 +19,18 @@
   --clickCol1: skyblue;
 }
 html { scroll-behavior: smooth}
+h1, h2, h3, h4, h5, h6{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+h1, h2{
+  font-family: 'Eczar', serif;
+} 
+/* font-size: 43px; */
+h3, h4, h5, h6{
+  font-family: 'Merriweather', serif;
+}
+/* font-size: 14px; */
 
 /*TABLE OF CONTENTS
 
@@ -47,6 +59,7 @@ Project Card Information 261
 }
 
 #currentPage {
+
   padding: 0 0 0 0;
   margin-top: 0;
   flex-wrap: wrap;
@@ -113,14 +126,18 @@ nav a {
 
 /* Change background on mouse-over */
 nav a:hover {
-  text-shadow: 2px 2px var(--highlightCol2);
+  text-shadow: 2px 2px 6px var(--highlightCol2);
   color: var(--fontCol1);
   transition: .5s;
-  text-size-adjust: 120%;
+  font-size: 110%;
 }
 
 nav a:active{
-  color: var(--highlightCol2);
+  transition-timing-function: ease-out;
+  
+  color: var(--backgroundCol1a);
+  font-size: 1.3em;
+  text-shadow: 0 0 3px var(--clickCol1)
 }
 
 
@@ -198,7 +215,14 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 6px var(--highlightCol2); /*TODO IS CHANGE THIS COLOR*/
+}
+
+.prev:active, .next:active{
+  transition-timing-function: ease-out;
+  color: var(--backgroundCol1a);
+  font-size: 1.25em;
+  text-shadow: 0 0 3px var(--clickCol1)
 }
 
 /* Caption text 
@@ -231,12 +255,18 @@ body {font-family: Verdana, sans-serif; margin:0}
   background-color: var(--backgroundCol2a);
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease
 }
 
-.active, .dot:hover {
+.dot:hover {
+    text-shadow: 2px 2px 60px var(--highlightCol2); /*TODO IS CHANGE THIS COLOR*/
+ 
+}
+
+.active {
   background-color: var(--backgroundCol3b);
 }
+
 
 /* Fading animation */
 .fade {
@@ -275,7 +305,7 @@ body {font-family: Verdana, sans-serif; margin:0}
   min-width: 350px;
   width: 1000px;
   max-width: 78%;
-  max-height: 100%;
+  height: 100%;
 
   flex-direction: column;
   align-items: center;

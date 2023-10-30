@@ -13,6 +13,10 @@
 - List of skills/tools used in the project
 - GithubURL of project
 */
+let scrollPosi = Number(0);
+let isScrollListening = true;
+let scrollPos = Number(0);
+let howManyScrolls = 0;
 
 class Project {
   constructor(
@@ -136,35 +140,41 @@ function showSlides(n) {
 
 // Detect Scrolling
 /*************************************************************************************************/
-// Initial state
-var scrollPosi = 0;
+function delaySleepingScrolling() {
+  isScrollListening = true;
+}
 // adding scroll event
-window.addEventListener("scroll", function () {
-  console.log("HIHIHI ");
-  // detects new state and compares it with the old one
-  if (document.body.getBoundingClientRect().top > scrollPosi) {
-    scrollUpward;
-  } else {
-    scrollDownward;
+function scrollingHere() {
+  console.log("listenON?" + isScrollListening); //REMOVAL REQUIRED
+  if (isScrollListening === true) {
+    // Prevents further listening until finished
+    isScrollListening = false;
+    // detects new state and compares it with the old one
+    console.log("sPosi" + scrollPosi); //REMOVAL REQUIRED
+    if (document.body.getBoundingClientRect().top > scrollPosi) {
+      console.log("up"); //REMOVAL REQUIRED
+      scrollUpward();
+    } else {
+      console.log("down"); //REMOVAL REQUIRED
+      scrollDownward();
+    }
+    // saves the new position for iteration.
+    scrollPosi = document.body.getBoundingClientRect().top;
+    console.log("++" + howManyScrolls++); //REMOVAL REQUIRED
   }
-  // saves the new position for iteration.
-  scrollPosi = document.body.getBoundingClientRect().top;
-});
+}
 
-var scrollPos = 0;
 //Scroll Up Stuff
 function scrollUpward() {
-  scrollPos--;
-  if (scrollPos < 0) {
-    scrollPos = 0;
+  if (scrollPos > 0) {
+    scrollPos--;
   }
   scrollTo(scrollPos);
 }
 //Scroll Down Stuff
 function scrollDownward() {
-  scroll++;
-  if (scrollPos > 4) {
-    scrollPos = 4;
+  if (scrollPos < 4) {
+    scrollPos++;
   }
   scrollTo(scrollPos);
 }
@@ -190,6 +200,7 @@ function scrollTo(n) {
       break;
     default:
       console.log("SCROLLING TO UNKNOWN ZONE#####################");
-    // code block
   }
+  // Re-enable scrolling after 3s
+  setTimeout(delaySleepingScrolling(), 3000);
 }
