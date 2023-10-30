@@ -147,14 +147,11 @@ function enableScrolling() {
   document.addEventListener("scroll", scrollingHere);
   updateCurrLoc();
   scrollPosi = currLoc;
-
-  console.log("E"); //REMOVAL REQUIRED
 }
 function disableScrolling() {
   isScrollListening = false;
   document.body.classList.add("remove-scrolling");
   document.removeEventListener("scroll", scrollingHere);
-  console.log("D"); //REMOVAL REQUIRED
 }
 
 function updateCurrLoc() {
@@ -163,24 +160,16 @@ function updateCurrLoc() {
 
 // adding scroll event
 function scrollingHere() {
-  console.log("listenON?" + isScrollListening); //REMOVAL REQUIRED
   if (isScrollListening === true) {
     // Prevents further listening until finished
     disableScrolling();
     // detects new state and compares it with the old one
     updateCurrLoc();
-    console.log("sPosi VS currLoc:" + scrollPosi + "VS" + currLoc); //REMOVAL REQUIRED
     if (currLoc > scrollPosi) {
-      console.log("up"); //REMOVAL REQUIRED
       scrollUpward();
     } else {
-      console.log("down"); //REMOVAL REQUIRED
       scrollDownward();
     }
-    // saves the new position for iteration.
-    // updateCurrLoc();
-    // scrollPosi = currLoc;
-    console.log("++" + howManyScrolls++); //REMOVAL REQUIRED
   }
 }
 
@@ -204,24 +193,33 @@ function scrollDownward() {
 }
 //Scroll To Stuff
 function scrollTo(n) {
-  // disableScrolling();
-  // scrollPos = n;
-  console.log("Section:" + scrollPos);
+  const vPage = document.getElementById("currentPage");
+  //linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a), var(--backgroundCol2a),var(--backgroundCol3a))
   switch (scrollPos) {
     case 0:
       window.location.href = "#pageTop";
+      vPage.style.backgroundImage =
+        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1a), var(--backgroundCol2a),var(--backgroundCol3a))";
       break;
     case 1:
       window.location.href = "#skills";
+      vPage.style.backgroundImage =
+        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1b), var(--backgroundCol2a),var(--backgroundCol3a))";
       break;
     case 2:
       window.location.href = "#projects";
+      vPage.style.backgroundImage =
+        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1b), var(--backgroundCol2b),var(--backgroundCol3a))";
       break;
     case 3:
       window.location.href = "#about";
+      vPage.style.backgroundImage =
+        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1b), var(--backgroundCol3a),var(--backgroundCol3a))";
       break;
     case 4:
       window.location.href = "#contact";
+      vPage.style.backgroundImage = vPage.style.backgroundImage =
+        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1b), var(--backgroundCol3a),var(--backgroundCol3b))";
       break;
     default:
       console.log("SCROLLING TO UNKNOWN ZONE#####################");

@@ -30,6 +30,10 @@ h1, h2{
 h3, h4, h5, h6, a, button{
   font-family: 'Merriweather', serif;
 }
+
+h6{
+  color: black
+}
 /* font-size: 14px; */
 
 .remove-scrolling { 
@@ -54,6 +58,7 @@ Project Card Information 261
 .alignLeftAndRight{
   display:flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .alignUpAndDown{
@@ -70,15 +75,10 @@ Project Card Information 261
   flex-wrap: wrap;
   margin-left:20%;
   max-width: 100%;
-  background-image: linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a), var(--backgroundCol2a),var(--backgroundCol3a));
+  background-image: linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1a), var(--backgroundCol2a),var(--backgroundCol3a));
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-#currentPage > section {
-  scroll-snap-align: center;
 }
 
 
@@ -112,6 +112,7 @@ nav {
   justify-content: space-between;
   border-right: 3px groove var(--fontCol1);
 }
+
 .navSplit{
   background-color: red;
   text-decoration: line-through;
@@ -136,17 +137,16 @@ nav a {
   justify-content: space-between; 
 }
 
-/* Change background on mouse-over */
 nav a:hover {
   text-shadow: 2px 2px 6px var(--highlightCol2);
   color: var(--fontCol1);
   transition: .5s;
   font-size: 110%;
+  cursor: pointer;
 }
 
 nav a:active{
   transition-timing-function: ease-out;
-  
   color: var(--backgroundCol1a);
   font-size: 1.3em;
   text-shadow: 0 0 3px var(--clickCol1)
@@ -225,9 +225,10 @@ body {font-family: Verdana, sans-serif; margin:0}
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  text-shadow: 2px 2px 6px var(--highlightCol2); /*TODO IS CHANGE THIS COLOR*/
+  text-shadow: 2px 2px 6px var(--highlightCol2);
+  cursor: pointer;
+  font-size: 180%;
 }
 
 .prev:active, .next:active{
@@ -271,12 +272,13 @@ body {font-family: Verdana, sans-serif; margin:0}
 }
 
 .dot:hover {
-    text-shadow: 2px 2px 60px var(--highlightCol2); /*TODO IS CHANGE THIS COLOR*/
+    text-shadow: 2px 2px 60px var(--highlightCol2); /*TODO GET THIS TO WORK*/
+    cursor: pointer;
  
 }
 
 .active {
-  background-color: var(--backgroundCol3b);
+  background-color: var(--highlightCol1);
 }
 
 
@@ -338,9 +340,9 @@ img.projImg {
   background-position: center;
   background-size: cover;
   height: 300px;
-  width: 70%;
+  width: 700px;
   max-height: 50vh;
-  max-width: 700px;
+  max-width: 50%;
 }
 
 
@@ -385,6 +387,7 @@ p.cardDetails {
   color: var--(--fontCol1);
   border-color: var(--fontCol1);
   transition: all .3s ease;  
+  cursor: pointer;
 }
 
 .fill {
@@ -400,4 +403,5 @@ p.cardDetails {
   border-color: rgba(255, 255, 255, 0.9);
   filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
   transition: all .3s ease;    
+  cursor: pointer;
 }
