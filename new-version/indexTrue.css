@@ -27,10 +27,15 @@ h1, h2{
   font-family: 'Eczar', serif;
 } 
 /* font-size: 43px; */
-h3, h4, h5, h6{
+h3, h4, h5, h6, a, button{
   font-family: 'Merriweather', serif;
 }
 /* font-size: 14px; */
+
+.remove-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 
 
 /*TABLE OF CONTENTS
 
@@ -58,8 +63,8 @@ Project Card Information 261
   align-items: center;
 }
 
-#currentPage {
 
+#currentPage {
   padding: 0 0 0 0;
   margin-top: 0;
   flex-wrap: wrap;
@@ -68,7 +73,14 @@ Project Card Information 261
   background-image: linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a), var(--backgroundCol2a),var(--backgroundCol3a));
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
+
+#currentPage > section {
+  scroll-snap-align: center;
+}
+
 
 @media screen and (min-width: 700px){
   #currentPage {

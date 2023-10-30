@@ -16,6 +16,7 @@
 let scrollPosi = Number(0);
 let isScrollListening = true;
 let scrollPos = Number(0);
+//let currLoc = document.body.getBoundingClientRect().top;
 let howManyScrolls = 0;
 
 class Project {
@@ -140,18 +141,36 @@ function showSlides(n) {
 
 // Detect Scrolling
 /*************************************************************************************************/
-function delaySleepingScrolling() {
+function enableScrolling() {
   isScrollListening = true;
+  document.body.classList.remove("remove-scrolling");
+  document.addEventListener("scroll", scrollingHere);
+  updateCurrLoc();
+  scrollPosi = currLoc;
+
+  console.log("E"); //REMOVAL REQUIRED
 }
+function disableScrolling() {
+  isScrollListening = false;
+  document.body.classList.add("remove-scrolling");
+  document.removeEventListener("scroll", scrollingHere);
+  console.log("D"); //REMOVAL REQUIRED
+}
+
+function updateCurrLoc() {
+  currLoc = document.body.getBoundingClientRect().top;
+}
+
 // adding scroll event
 function scrollingHere() {
   console.log("listenON?" + isScrollListening); //REMOVAL REQUIRED
   if (isScrollListening === true) {
     // Prevents further listening until finished
-    isScrollListening = false;
+    disableScrolling();
     // detects new state and compares it with the old one
-    console.log("sPosi" + scrollPosi); //REMOVAL REQUIRED
-    if (document.body.getBoundingClientRect().top > scrollPosi) {
+    updateCurrLoc();
+    console.log("sPosi VS currLoc:" + scrollPosi + "VS" + currLoc); //REMOVAL REQUIRED
+    if (currLoc > scrollPosi) {
       console.log("up"); //REMOVAL REQUIRED
       scrollUpward();
     } else {
@@ -159,7 +178,8 @@ function scrollingHere() {
       scrollDownward();
     }
     // saves the new position for iteration.
-    scrollPosi = document.body.getBoundingClientRect().top;
+    // updateCurrLoc();
+    // scrollPosi = currLoc;
     console.log("++" + howManyScrolls++); //REMOVAL REQUIRED
   }
 }
@@ -168,20 +188,25 @@ function scrollingHere() {
 function scrollUpward() {
   if (scrollPos > 0) {
     scrollPos--;
+    scrollTo(scrollPos);
+  } else {
+    enableScrolling();
   }
-  scrollTo(scrollPos);
 }
 //Scroll Down Stuff
 function scrollDownward() {
   if (scrollPos < 4) {
     scrollPos++;
+    scrollTo(scrollPos);
+  } else {
+    enableScrolling();
   }
-  scrollTo(scrollPos);
 }
 //Scroll To Stuff
 function scrollTo(n) {
-  scrollPos = n;
-  console.log("sPos" + scrollPos);
+  // disableScrolling();
+  // scrollPos = n;
+  console.log("Section:" + scrollPos);
   switch (scrollPos) {
     case 0:
       window.location.href = "#pageTop";
@@ -201,6 +226,13 @@ function scrollTo(n) {
     default:
       console.log("SCROLLING TO UNKNOWN ZONE#####################");
   }
-  // Re-enable scrolling after 3s
-  setTimeout(delaySleepingScrolling(), 3000);
+  // Re-enable scrolling after 1s
+  setTimeout(enableScrolling, 700);
+}
+
+//NavGoTO function
+function navGoTo(n) {
+  scrollPos = n;
+  disableScrolling();
+  scrollTo(scrollPos);
 }
