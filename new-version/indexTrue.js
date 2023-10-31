@@ -214,12 +214,12 @@ function scrollTo(n) {
     case 3:
       window.location.href = "#about";
       vPage.style.backgroundImage =
-        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1b), var(--backgroundCol3a),var(--backgroundCol3a))";
+        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1b), var(--backgroundCol2b),var(--backgroundCol3b))";
       break;
     case 4:
       window.location.href = "#contact";
       vPage.style.backgroundImage = vPage.style.backgroundImage =
-        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol1b), var(--backgroundCol3a),var(--backgroundCol3b))";
+        "linear-gradient(var(--backgroundCol1a),var(--backgroundCol1a),var(--backgroundCol2b), var(--backgroundCol3a),var(--backgroundCol3b))";
       break;
     default:
       console.log("SCROLLING TO UNKNOWN ZONE#####################");
