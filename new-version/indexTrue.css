@@ -34,12 +34,16 @@ h3, h4, h5, h6, a, button{
 h6{
   color: black
 }
-/* font-size: 14px; */
 
 .remove-scrolling { 
   height: 100%; 
   overflow: hidden; 
 } 
+
+.mainImage{
+  max-width: 80%;
+  max-height: 80%;
+}
 
 /*TABLE OF CONTENTS
 
