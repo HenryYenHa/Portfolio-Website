@@ -28,3 +28,13 @@ function toggleMenu() {
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
+
+function killNav() {
+  const dieNav = document.getElementById("includeNavBar");
+  dieNav.innerHTML = "";
+}
+
+function resNav() {
+  const liveNav = document.getElementById("includeNavBar");
+  liveNav.load("navBar.html");
+}

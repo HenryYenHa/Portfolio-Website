@@ -38,6 +38,9 @@
       $(function () {
         $("#includeAbout").load("about.html");
       });
+      function resNav() {
+        $("#includeNavBar").load("navBar.html");
+      }
     </script>
   </head>
 
@@ -47,6 +50,9 @@
       <section id="pageTop">
         <div id="pageTop">
           <h1>Henry Ha</h1>
+          <button onkeypress="killNav()">KILL NAV</button>
+          <button onkeypress="resNav()">LIVE!</button>
+
           <h2>Maybe I need a tagline.</h2>
         </div>
       </section>

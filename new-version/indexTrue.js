@@ -61,6 +61,7 @@ async function getDirtyJSONs(url) {
   const jsFetch = await rawFetch.json(); //Turn to JS readable
   const payload = await jsFetch.payload; //Grab the payload
 
+  //Populate the project list
   let projectPop = "";
   let projPopNum = 0;
   for (project of payload) {
