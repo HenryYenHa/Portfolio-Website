@@ -1,0 +1,101 @@
+[
+  {
+    "id": "4f77c2b4-065d-4c03-9d92-8b4231f7d001",
+    "title": "Downtown Plaza Renovation",
+    "projectType": "Commercial",
+    "sub-type": ["Renovation"],
+    "gross_area": 50000,
+    "gross_area_units": "sqft",
+    "num_stories": 10,
+    "address": {
+      "city": "Metropolis",
+      "country": "United States",
+      "line_1": "123 Main Street",
+      "state_prov": "CA",
+      "zip_postal": "90001"
+    },
+    "name": "Metropolis Plaza",
+    "ownerAttCorpId": "attCorp-001",
+    "CALCOTeam": {
+      "seniorManagementTeam": ["user-001", "user-002"],
+      "projectManagementTeam": ["attCorp-002", "attCorp-003"],
+      "projectImplementationTeam": ["attCorp-004", "attCorp-005"]
+    },
+    "commodityTeam": {
+      "commodityTrades": ["attCorp-006", "attCorp-007"],
+      "commoditySuppliers": ["attCorp-008", "attCorp-009"],
+      "commodityConsultants": ["attCorp-010", "attCorp-011"]
+    },
+    "description": "Renovation of the iconic Metropolis Plaza in the heart of downtown.",
+    "modelURN": "urn:metropolis-renovation-001",
+    "modelLatestVersion": 1,
+    "modelLatestVersionId": "model-001",
+    "modelVersions": []
+  },
+  {
+    "id": "a5e98c3d-7912-4a3e-bf7a-9c42e4dc8652",
+    "title": "Sunnydale Estates",
+    "projectType": "Residential",
+    "sub-type": ["New"],
+    "gross_area": 75000,
+    "gross_area_units": "sqm",
+    "num_stories": 5,
+    "address": {
+      "city": "Sunsetville",
+      "country": "Canada",
+      "line_1": "456 Oak Street",
+      "state_prov": "ON",
+      "zip_postal": "M1A 2B3"
+    },
+    "name": "Sunnydale Estates",
+    "ownerAttCorpId": "attCorp-012",
+    "CALCOTeam": {
+      "seniorManagementTeam": ["user-003", "user-004"],
+      "projectManagementTeam": ["attCorp-013", "attCorp-014"],
+      "projectImplementationTeam": ["attCorp-015", "attCorp-016"]
+    },
+    "commodityTeam": {
+      "commodityTrades": ["attCorp-017", "attCorp-018"],
+      "commoditySuppliers": ["attCorp-019", "attCorp-020"],
+      "commodityConsultants": ["attCorp-021", "attCorp-022"]
+    },
+    "description": "Development of a new residential community with modern amenities.",
+    "modelURN": "urn:sunnydale-estates-001",
+    "modelLatestVersion": 1,
+    "modelLatestVersionId": "model-002",
+    "modelVersions": []
+  },
+  {
+    "id": "892d9d36-d508-4e9c-a3b1-1b8fd4410b74",
+    "title": "TechHub Industrial Park",
+    "projectType": "Industrial",
+    "sub-type": ["Mixed Use", "Addition"],
+    "gross_area": 100000,
+    "gross_area_units": "acres",
+    "num_stories": 3,
+    "address": {
+      "city": "Techville",
+      "country": "United Kingdom",
+      "line_1": "789 Tech Avenue",
+      "state_prov": "ENG",
+      "zip_postal": "SW1A 1AA"
+    },
+    "name": "TechHub Industrial Park",
+    "ownerAttCorpId": "attCorp-023",
+    "CALCOTeam": {
+      "seniorManagementTeam": ["user-005", "user-006"],
+      "projectManagementTeam": ["attCorp-024", "attCorp-025"],
+      "projectImplementationTeam": ["attCorp-026", "attCorp-027"]
+    },
+    "commodityTeam": {
+      "commodityTrades": ["attCorp-028", "attCorp-029"],
+      "commoditySuppliers": ["attCorp-030", "attCorp-031"],
+      "commodityConsultants": ["attCorp-032", "attCorp-033"]
+    },
+    "description": "Expansion of TechHub Industrial Park to include mixed-use facilities.",
+    "modelURN": "urn:techhub-industrial-park-001",
+    "modelLatestVersion": 1,
+    "modelLatestVersionId": "model-003",
+    "modelVersions": []
+  }
+]
