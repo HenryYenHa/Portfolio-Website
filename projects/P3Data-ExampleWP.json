@@ -503,7 +503,7 @@
     "submittedBids": ["bid-304", "bid-305", "bid-306"],
     "workPackageGradationId": "wp-302",
     "elementInstanceIds": ["elem-304", "elem-305", "elem-306"],
-    "modelVersionId": "urn:harborfront-towers-001",
+    "modelVersionId": "urn:harborfron-towers-001",
     "modelVersion": 1,
     "status": "In Development",
     "anticipatedDateForDelivery": "2024-06-15",
